@@ -1,0 +1,13 @@
+.scout-form .error-message 
+{
+	display:block;
+	width:194px;
+	clear:both;
+}
+
+.scout-form .error-message span {
+	font-size:12px;
+	color:#400; 
+
+}
+

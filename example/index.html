@@ -1,0 +1,765 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <title>index</title>
+    
+    <link rel="stylesheet" type="text/css" href="css/example.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/scout.base.css" />
+	<link rel="stylesheet" type="text/css" href="css/scout.password.css" />
+    <link rel="stylesheet" type="text/css" href="css/scout.error.css" />
+    <link rel="stylesheet" type="text/css" href="css/scout.Datepicker.css" />   
+	
+	
+	<script src="../jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../demo.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script src="../base.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scout.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scout.date.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scout.plugFunctions.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scout.defaults.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scout.markup.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scout.datepicker.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scout.validate.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scout.errors.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scout.hint.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scout.password.js" type="text/javascript" charset="utf-8"></script>
+	
+	
+</head>
+
+<body>
+
+<form class="scout-form">
+
+<p>
+	This example presents all avaible features of Scout. All instructions tags are hidden. You can view given constraints by moving your mouse over field labels and hint icons.
+</p>
+
+	<fieldset>
+        <legend>Different Controls</legend>
+
+        <div class = "markup-holder">
+  			
+			<pre   class="instruction-holder">{
+			 'name' : 'different_controls_input',
+			 'constraints' : 'EqualTo("a")',
+		   	 'hint_message' : 'EqualTo("a")'
+			}</pre>		
+        
+            <label for="different_controls_input" class="description-label">Input</label>
+            <div class="validation-target-holder">
+                <input class="validation-target" type="text" id="different_controls_input"  name="different_controls_input"></input>
+  			</div>
+
+		</div>
+		
+		<div class = "markup-holder">
+			<pre   class="instruction-holder">{
+			 'name' : 'different_controls_radio',
+			 'type' : 'String',
+			 'constraints' : 'EqualTo("b")',
+			 'hint_message' : 'EqualTo("b")'
+		    }</pre>		
+        
+            <span	 class="description-label">Radios</span>
+            <div class="validation-target-holder">		
+	                <input class="validation-target"  value="a" type="radio" id="different_controls_radio_1"  name="different_controls_radio"></input>
+					<label for="different_controls_radio_1">a</label><br/>
+	            	<input class="validation-target"  value="b" type="radio" id="different_controls_radio_2"  name="different_controls_radio"></input>
+					<label for="different_controls_radio_1">b</label><br/>	
+					<input class="validation-target"  value="c" type="radio" id="different_controls_radio_3"  name="different_controls_radio"></input>
+	            	<label for="different_controls_radio_1">c</label><br/>
+					<input class="validation-target"  value="d" type="radio" id="different_controls_radio_4"  name="different_controls_radio"></input>
+					<label for="different_controls_radio_1">d</label><br/>
+  			</div>
+		
+		</div>
+		
+		<div class = "markup-holder">
+            <pre   class="instruction-holder">{
+                        'name' : 'different_controls_select',
+                        'type' : 'String',
+                        'constraints' : 'EqualTo("c")',
+                        'hint_message' : 'EqualTo("c")',
+            }</pre>
+
+            <label for="different_controls_select" class="description-label">Select</label>
+          	<div class="validation-target-holder">
+    		  <select class="validation-target" id="different_controls_select" name="different_controls_select">
+                <option value="a">a</option>
+                <option value="b">b</option>
+                <option value="c">c</option>
+                <option value="d">d</option>
+                <option value="e">e</option>
+              </select>
+           </div>
+        </div>
+		
+		<div class = "markup-holder">
+			<pre   class="instruction-holder">{
+			 'name' : 'different_controls_checkbox',
+			 'type' : 'String',
+			 'constraints' : 'EqualTo("d")',
+			 'hint_message' : 'EqualTo("d")'
+		    }</pre>		
+        
+            <span class="description-label">Checkbox</span>
+            <div class="validation-target-holder">		
+	                <input class="validation-target"  value="d" type="checkbox" id="different_controls_checkbox"  name="different_controls_checkbox"></input>
+					<label for="different_controls_checkbox">d</label><br/>
+  			</div>
+		
+		</div>
+
+        <div class = "markup-holder">
+              <pre   class="instruction-holder">{
+                        'name' : 'different_controls_password',
+                        'type' : 'Password',
+                        'constraints' : 'StartsWith("a")',
+                        'hint_message' : 'StartsWith("a")',
+                        'validate_at' : 'blur'
+              }</pre>
+        
+            <label for="different_controls_password" class="description-label">Passwords</label>
+          
+            <div class="validation-target-holder">
+              <input class="validation-target" type="password" id="different_controls_password" name="different_controls_password"></input>
+            </div>
+        </div>
+		
+    </fieldset>
+
+    <fieldset>
+        <legend>Bool operators</legend>
+
+        <div class = "markup-holder">
+                <pre   class="instruction-holder">{
+                        'name' : 'bool_operators_and',
+                        'type' : 'String',
+                        'constraints' : 'GreaterThan(3)&&LessThan(6)',
+                        'hint_message' : 'GreaterThan(3)&&LessThan(6)',
+				}</pre>
+        
+                <label for="bool_operators_and" class="description-label">AND ( GreaterThan(3)&&LessThan(6)) </label>
+	            <div class="validation-target-holder">
+	                <input class="validation-target" type="text" id="bool_operators_and" name="bool_operators_and"></input>
+	  			</div>
+        </div>
+
+		<div class = "markup-holder">
+                <pre   class="instruction-holder">{
+                        'name' : 'bool_operators_or',
+                        'type' : 'String',
+                        'constraints' : 'EqualTo("a")||EqualTo("b")',
+                        'hint_message' : 'EqualTo("a")||EqualTo("b")'
+				}</pre>
+        
+                <label for="bool_operators_or" class="description-label"> OR ( EqualTo("a")||EqualTo("b") )</label>
+	            <div class="validation-target-holder">
+	                <input class="validation-target" type="text" id="bool_operators_or" name="bool_operators_or"></input>
+	  			</div>
+        </div>
+        
+        <div class = "markup-holder">
+                <pre   class="instruction-holder">{
+                        'name' : 'bool_operators_not',
+                        'type' : 'String',
+                        'hint_message' : '!EqualTo("c")',
+						'constraints' : '!EqualTo("c")',
+				}</pre>
+        
+                <label for="bool_operators_not" class="description-label">NOT</label>
+	            <div class="validation-target-holder">
+	                <input class="validation-target" type="text" id="bool_operators_not" name="bool_operators_not"></input>
+	  			</div>
+        </div>
+
+		<div class = "markup-holder">
+                <pre   class="instruction-holder">{
+                        'name' : 'bool_operators_nesting',
+                        'type' : 'String',
+                        'hint_message' : 'EqualTo(8)||(GreaterThan(3)&&LessThan(6))',
+						'constraints' : 'EqualTo(8)||(GreaterThan(3)&&LessThan(6))',
+				}</pre>
+        
+                <label for="bool_operators_nesting" class="description-label">Nesting</label>
+	            <div class="validation-target-holder">
+	                <input class="validation-target" type="text" id="bool_operators_nesting" name="bool_operators_nesting"></input>
+	  			</div>
+        </div>
+        
+    </fieldset>
+
+    <fieldset>
+        <legend>Traversing</legend>
+        
+            <div class = "markup-holder">
+				<pre   class="instruction-holder">{
+                            'name' : 'traversing_CurrentDate',
+                            'type' : 'String',
+                            'hint_message' : 'normal {CurrentDate("d.m.y")}dash separated {CurrentDate("d-m-y")} slash separated inverted {CurrentDate("y/m/d")}',
+                }</pre>
+
+			    <label for="traversing_CurrentDate" class="description-label">CurrentDate Hint</label>
+                <div class="validation-target-holder">
+			      <input class="validation-target" type="text" id="traversing_CurrentDate"  name="traversing_CurrentDate"></input>
+                </div>
+            </div>
+     
+			<div class = "markup-holder">
+				<pre   class="instruction-holder">{
+                            'name' : 'traversing_CurrentDayNumber',
+                            'type' : 'String',
+                            'hint_message' : '{CurrentDayNumber()}',
+                }</pre>
+
+			    <label for="traversing_CurrentDayNumber" class="description-label">CurrentDayNumber Hint</label>
+                <div class="validation-target-holder">
+			      <input class="validation-target" type="text" id="traversing_CurrentDayNumber"  name="traversing_CurrentDayNumber"></input>
+                </div>
+            </div>
+
+           	<div class = "markup-holder">
+				<pre   class="instruction-holder">{
+                            'name' : 'traversing_CurrentMonthNumber',
+                            'type' : 'String',
+                            'hint_message' : '{CurrentMonthNumber()}',
+                }</pre>
+
+			    <label for="traversing_CurrentMonthNumber" class="description-label">CurrentMonthNumber Hint</label>
+                <div class="validation-target-holder">
+			      <input class="validation-target" type="text" id="traversing_CurrentMonthNumber"  name="traversing_CurrentMonthNumber"></input>
+                </div>
+            </div>
+		
+            <div class = "markup-holder">
+				<pre   class="instruction-holder">{
+                            'name' : 'traversing_CurrentMonthName',
+                            'type' : 'String',
+                            'hint_message' : '{CurrentMonthName()}',
+                }</pre>
+
+			    <label for="traversing_CurrentMonthName" class="description-label">traversing_CurrentMonthName Hint</label>
+                <div class="validation-target-holder">
+			      <input class="validation-target" type="text" id="traversing_CurrentMonthName"  name="traversing_CurrentMonthName"></input>
+                </div>
+            </div>
+
+			<div class = "markup-holder">
+					<pre   class="instruction-holder">{
+	                            'name' : 'traversing_CurrentTime',
+	                            'type' : 'String',
+	                            'hint_message' : '{CurrentTime(24)} 12h {CurrentTime(12)}',
+	                }</pre>
+
+				    <label for="traversing_CurrentTime" class="description-label">traversing_CurrentTime Hint</label>
+	                <div class="validation-target-holder">
+				      <input class="validation-target" type="text" id="traversing_CurrentTime"  name="traversing_CurrentTime"></input>
+	                </div>
+	         </div>
+			
+			<div class = "markup-holder">
+						<pre   class="instruction-holder">{
+		                            'name' : 'traversing_Current',
+		                            'type' : 'String',
+		                            'hint_message' : '{CurrentHour()}h {CurrentMinute()}m {CurrentSecond()}s',
+		                }</pre>
+
+					    <label for="traversing_Current" class="description-label"> Current[Hour/Minute/Second] Hint</label>
+		                <div class="validation-target-holder">
+					      <input class="validation-target" type="text" id="traversing_Current"  name="traversing_Current"></input>
+		                </div>
+		      </div>
+
+    </fieldset>
+    
+    <fieldset>
+        <legend>Type Validation</legend>        
+   
+        <div class = "markup-holder">
+            <pre   class="instruction-holder">{
+                        'name' : 'type_validation_float',
+                        'type' : 'Float',
+                        'hint_message' : 'Float'
+			}</pre>
+        
+            <label for="type_validation_float" class="description-label">Float</label>
+ 			<div class="validation-target-holder">
+              <input class="validation-target" type="text" id="type_validation_float"  name="type_validation_float"></input>
+            </div>
+        </div>
+
+        <div class = "markup-holder">
+            <pre   class="instruction-holder">{
+                        'name' : 'type_validation_positive',
+                        'type' : 'Positive',
+                        'hint_message' : 'Positive'
+			}</pre>
+        
+            <label for="type_validation_positive" class="description-label">Positive</label>
+ 			<div class="validation-target-holder">
+              <input class="validation-target" type="text" id="type_validation_positive"  name="type_validation_positive"></input>
+            </div>
+        </div>
+        
+        <div class = "markup-holder">
+            <pre   class="instruction-holder">{
+                        'name' : 'type_validation_integer',
+                        'type' : 'Integer',
+                        'hint_message' : 'Integer'
+			}</pre>
+        
+            <label for="type_validation_integer" class="description-label">Integer</label>
+ 			<div class="validation-target-holder">
+              <input class="validation-target" type="text" id="type_validation_integer"  name="type_validation_integer"></input>
+            </div>
+        </div>
+
+        <div class = "markup-holder">
+            <pre   class="instruction-holder">{
+                        'name' : 'type_validation_natural',
+                        'type' : 'Natural',
+                        'hint_message' : 'Natural'
+			}</pre>
+        
+            <label for="type_validation_natural" class="description-label">Natural</label>
+ 			<div class="validation-target-holder">
+              <input class="validation-target" type="text" id="type_validation_natural"  name="type_validation_natural"></input>
+            </div>
+        </div> 
+        
+
+		 <div class = "markup-holder">
+	            <pre class="instruction-holder">{
+	                        'name' : 'type_validation_char',
+	                        'type' : 'Char(5)',
+	                        'hint_message' : 'Char(5)'
+				}</pre>
+
+	            <label for="type_validation_char" class="description-label">Char(5)</label>
+	 			<div class="validation-target-holder">
+	              <input class="validation-target" type="text" id="type_validation_char"  name="type_validation_char"></input>
+	            </div>
+	     </div>
+
+        <div class = "markup-holder">
+	            <pre   class="instruction-holder">{
+	                        'name' : 'type_validation_string',
+	                        'type' : 'String',
+	                        'hint_message' : 'String'
+				}</pre>
+
+	            <label for="type_validation_string" class="description-label">String</label>
+	 			<div class="validation-target-holder">
+	              <input class="validation-target" type="text" id="type_validation_string"  name="type_validation_string"></input>
+	            </div>
+	        </div>
+
+        
+    </fieldset>
+        
+    <fieldset>
+	
+        <legend>Equality</legend>
+    
+    	<div class = "markup-holder">
+            <pre   class="instruction-holder">{
+            'name' : 'equality_EqualTo',
+            'type' : 'String',
+            'constraints' : 'EqualTo("a")',
+            'hint_message' : 'EqualTo("a")',
+			}</pre>
+        
+            <label for="equality_EqualTo" class="description-label">equalTo</label>
+            <div class="validation-target-holder">
+			  <input class="validation-target" class="scout-validation-target" type="text" id="equality_EqualTo" name="equality_EqualTo"></input>
+            </div>
+        </div>
+        
+        <div class = "markup-holder">
+             <pre   class="instruction-holder">{
+                    'name' : 'equality_equalToAny',
+                    'type' : 'String',
+                    'constraints' : 'EqualToAny(["1",3,"a","b"])',
+                    'hint_message' : 'EqualToAny(["1",3,"a","b"])',
+				}</pre>
+            <label for="equality_equalToAny" class="description-label">equalToAny</label>
+            <div class="validation-target-holder">
+			  <input class="validation-target" type="text" id="equality_equalToAny" name="equality_equalToAny"></input>
+            </div>
+        </div>
+        
+        <div class = "markup-holder">
+             <pre   class="instruction-holder">{
+                    'name' : 'equality_InRange',
+                    'type' : 'String',
+                    'constraints' : 'InRange([1,3,7,10])',
+                    'hint_message' : 'InRange([1,3,7,10])',
+				}</pre>
+            <label for="equality_InRange" class="description-label">InRange</label>
+			<div class="validation-target-holder">
+              <input class="validation-target" type="text" id="equality_InRange" name="equality_InRange"></input>
+            </div>
+        </div>
+        
+    </fieldset>
+    
+    <fieldset>
+        <legend>Greater Than</legend>
+
+        <div class = "markup-holder">
+            <pre   class="instruction-holder">{
+                        'name' : 'greater_than',
+                        'type' : 'String',
+                        'constraints' : 'GreaterThan([1,2,5,6,9])',
+                        'hint_message' : 'GreaterThan([1,2,5,6,9])'
+				}</pre>
+        
+            <label for="greater_than" class="description-label">GreaterThan</label>
+            <div class="validation-target-holder">
+			  <input class="validation-target" type="text" id="greater_than"  name="greater_than"></input>
+            </div>
+        </div>
+
+        <div class = "markup-holder">
+            <pre   class="instruction-holder">{
+                        'name' : 'greater_OrEqualTo',
+                        'type' : 'String',
+                        'constraints' : 'GreaterOrEqualTo([1,2,5,6,9])',
+                        'hint_message' : 'GreaterOrEqualTo([1,2,5,6,9])'
+				}</pre>
+            <label for="greater_OrEqualTo" class="description-label">GreaterOrEqualTo</label>
+            <div class="validation-target-holder">
+			  <input class="validation-target" type="text" id="greater_than"  name="greater_OrEqualTo"></input>
+            </div>
+        </div>
+        
+        <div class = "markup-holder">
+            <pre   class="instruction-holder">{
+                        'name' : 'greater_ThanAny',
+                        'type' : 'String',
+                        'constraints' : 'GreaterThanAny([1,2,5,6,9])',
+                        'hint_message' : 'GreaterThanAny([1,2,5,6,9])'
+				}</pre>
+    		<label for="greater_ThanAny" class="description-label"> GreaterThanAny</label>
+            <div class="validation-target-holder">
+			  <input class="validation-target" type="text" id="greater_than"  name="greater_ThanAny"></input>
+            </div>
+        </div>
+            
+        <div class = "markup-holder">
+          	<pre   class="instruction-holder">{
+		
+                    'name' : 'greater_OrEqualToAny',
+                    'type' : 'String',
+                    'constraints' : 'GreaterOrEqualToAny([1,2,5,6,9])',
+                    'hint_message' : 'GreaterOrEqualToAny([1,2,5,6,9])'
+          	}</pre>
+
+          <label for="greater_OrEqualToAny" class="description-label">GreaterOrEqualToAny</label>
+          <div class="validation-target-holder">
+		    <input class="validation-target" type="text" id="greater_than"  name="greater_OrEqualToAny"></input>
+          </div>
+        </div>
+
+    </fieldset>
+    
+    <fieldset>
+        <legend>Less</legend>
+
+        <div class = "markup-holder">
+            <pre   class="instruction-holder">{
+                        'name' : 'less_than',
+                        'type' : 'String',
+                        'constraints' : 'LessThan([1,2,5,6,9])',
+                        'hint_message' : 'LessThan([1,2,5,6,9])',
+				}</pre>
+        
+            <label for="less_than" class="description-label">LessThan</label>
+            <div class="validation-target-holder">
+			  <input class="validation-target" type="text" id="less_than"  name="less_than"></input>
+            </div>
+        </div>
+
+        <div class = "markup-holder">
+            <pre   class="instruction-holder">{
+                        'name' : 'less_OrEqualTo',
+                        'type' : 'String',
+                        'constraints' : 'LessOrEqualTo([1,2,5,6,9])',
+                        'hint_message' : 'LessOrEqualTo([1,2,5,6,9])',
+				}</pre>
+            <label for="less_OrEqualTo" class="description-label">LessOrEqualTo</label>
+            <div class="validation-target-holder">
+			  <input class="validation-target" type="text" id="less_OrEqualTo"  name="less_OrEqualTo"></input>
+            </div>
+        </div>
+        
+        <div class = "markup-holder">
+            <pre   class="instruction-holder">{
+                        'name' : 'less_ThanAny',
+                        'type' : 'String',
+                        'constraints' : 'LessThanAny([1,2,5,6,9])',
+                        'hint_message' : 'LessThanAny([1,2,5,6,9])',
+				}</pre>
+    
+            <label for="less_ThanAny" class="description-label"> LessThanAny</label>
+            <div class="validation-target-holder">
+			  <input class="validation-target" type="text" id="less_ThanAny"  name="less_ThanAny"></input>
+            </div>
+        </div>
+            
+        <div class = "markup-holder">
+            <pre   class="instruction-holder">{
+                        'name' : 'less_OrEqualToAny',
+                        'type' : 'String',
+                        'constraints' : 'LessOrEqualToAny([1,2,5,6,9])',
+                        'hint_message' : 'LessOrEqualToAny([1,2,5,6,9])',
+				}</pre>
+
+            <label for="less_OrEqualToAny" class="description-label">LessOrEqualToAny</label>
+            <div class="validation-target-holder">
+			  <input class="validation-target" type="text" id="less_OrEqualToAny"  name="less_OrEqualToAny"></input>
+            </div>
+        </div>
+    
+    </fieldset>
+    
+    <fieldset>
+        <legend>Integrity constraints</legend>
+
+        <div class = "markup-holder">
+            <pre   class="instruction-holder">{
+                        'name' : 'integrity_constraints_mandatory',
+                        'type' : 'String',
+                        'constraints' : 'Mandatory()',
+                        'hint_message' : 'Mandatory()'
+             }</pre>
+
+            <label for="integrity_constraints_mandatory" class="description-label">Mandatory</label>
+            <div class="validation-target-holder">
+			  <input class="validation-target" type="text" id="integrity_constraints_mandatory"  name="integrity_constraints_mandatory"></input>
+            </div>
+        </div>
+
+
+		<div class = "markup-holder">
+            <pre   class="instruction-holder">{
+                        'name' : 'integrity_constraints_helper',
+                        'type' : 'String',
+                        'constraints' : 'EqualTo("a")',
+                        'hint_message' : 'EqualTo("a")'
+             }</pre>
+
+            <label for="integrity_constraints_helper" class="description-label">integrity_constraints_helper</label>
+            <div class="validation-target-holder">
+			  <input class="validation-target" type="text" id="integrity_constraints_helper"  name="integrity_constraints_helper"></input>
+            </div>
+        </div>
+
+			<div class = "markup-holder">
+	            <pre   class="instruction-holder">{
+	                        'name' : 'integrity_constraints_OtherFieldNotEmpty',
+	                        'type' : 'String',
+	                        'constraints' : 'OtherFieldNotEmpty("integrity_constraints_helper")',
+	                        'hint_message' : 'OtherFieldNotEmpty("integrity_constraints_helper")'
+	             }</pre>
+
+	            <label for="integrity_constraints_OtherFieldNotEmpty" class="description-label">OtherFieldNotEmpty</label>
+	            <div class="validation-target-holder">
+				  <input class="validation-target" type="text" id="integrity_constraints_OtherFieldNotEmpty"  name="integrity_constraints_OtherFieldNotEmpty"></input>
+	            </div>
+	        </div>
+
+			<div class = "markup-holder">
+	            <pre   class="instruction-holder">{
+	                        'name' : 'integrity_constraints_OtherFieldValidated',
+	                        'type' : 'String',
+	                        'constraints' : 'OtherFieldValidated("integrity_constraints_helper",true)',
+	                        'hint_message' : 'OtherFieldValidated("integrity_constraints_helper",true)'
+	             }</pre>
+
+	            <label for="integrity_constraints_OtherFieldValidated" class="description-label">OtherFieldValidated</label>
+	            <div class="validation-target-holder">
+				  <input class="validation-target" type="text" id="integrity_constraints_OtherFieldValidated"  name="integrity_constraints_OtherFieldValidated"></input>
+	            </div>
+	        </div>
+
+			<div class = "markup-holder">
+	            <pre   class="instruction-holder">{
+	                        'name' : 'integrity_constraints_OtherFieldValidatedWith',
+	                        'type' : 'String',
+	                        'constraints' : 'OtherFieldValidatedWith("integrity_constraints_helper","EqualTo(\\"b\\")",true)',
+	                        'hint_message' : 'OtherFieldValidatedWith("integrity_constraints_helper","EqualTo(\\"b\\")",true)'
+	             }</pre>
+
+	            <label for="integrity_constraints_OtherFieldValidatedWith" class="description-label">OtherFieldValidatedWith</label>
+	            <div class="validation-target-holder">
+				  <input class="validation-target" type="text" id="integrity_constraints_OtherFieldValidatedWith"  name="integrity_constraints_OtherFieldValidatedWith"></input>
+	            </div>
+	        </div>
+	
+			
+            
+    </fieldset>
+    
+    <fieldset>
+        <legend>String operators</legend>
+
+        <div class = "markup-holder">
+            <pre   class="instruction-holder">{
+                        'name' : 'string_empty',
+                        'type' : 'String',
+                        'constraints' : 'Empty()',
+                        'hint_message' : 'Empty()'
+				}</pre>
+        
+            <label for="string_empty" class="description-label">Empty</label>
+            <div class="validation-target-holder">
+			  <input class="validation-target" type="text" id="string_empty"  name="string_empty"></input>
+            </div>
+        </div>
+
+        <div class = "markup-holder">
+            <pre   class="instruction-holder">{
+                        'name' : 'string_StartsWith',
+                        'type' : 'String',
+                        'constraints' : 'StartsWith(["a","bc"])',
+                        'hint_message' : 'StartsWith(["a","bc"])',
+				}</pre>
+        
+            <label for="string_StartsWith" class="description-label">StartsWith</label>
+            <div class="validation-target-holder">
+			  <input class="validation-target" type="text" id="string_StartsWith"  name="string_StartsWith"></input>
+            </div>
+        </div>
+                
+        <div class = "markup-holder">
+            <pre   class="instruction-holder">{
+                        'name' : 'string_EndsWith',
+                        'type' : 'String',
+                        'constraints' : 'EndsWith(["a","bc"])',
+                        'hint_message' : 'EndsWith(["a","bc"])',
+				}</pre>
+        
+            <label for="string_EndsWith" class="description-label">EndsWith</label>
+            <div class="validation-target-holder">
+			  <input class="validation-target" type="text" id="string_EndsWith"  name="string_EndsWith"></input>
+            </div>
+        </div>
+        
+        <div class = "markup-holder">
+            <pre   class="instruction-holder">{
+                        'name' : 'string_Contains',
+                        'type' : 'String',
+                        'constraints' : 'Contains(["a","bc"])',
+                        'hint_message' : 'Contains(["a","bc"])',
+				}</pre>
+        
+            <label for="string_Contains" class="description-label">Contains(</label>
+            <div class="validation-target-holder">
+			  <input class="validation-target" type="text" id="string_Contains"  name="string_Contains"></input>
+            </div>
+        </div>
+        
+        <div class = "markup-holder">
+            <pre   class="instruction-holder">{
+                        'name' : 'string_IsAlpha',
+                        'type' : 'String',
+                        'constraints' : 'IsAlpha()',
+                        'hint_message' : 'IsAlpha()',
+				}</pre>
+        
+            <label for="string_IsAlpha" class="description-label">IsAlpha</label>
+            <div class="validation-target-holder">
+			  <input class="validation-target" type="text" id="string_IsAlpha"  name="string_IsAlpha"></input>
+            </div>
+        </div>
+
+        <div class = "markup-holder">
+            <pre   class="instruction-holder">{
+                        'name' : 'string_IsUpperCase',
+                        'type' : 'String',
+                        'constraints' : 'IsUpperCase()',
+                        'hint_message' : 'IsUpperCase()',
+				}</pre>
+        
+            <label for="string_IsUpperCase" class="description-label">IsUpperCase</label>
+            <div class="validation-target-holder">
+			  <input class="validation-target" type="text" id="string_IsUpperCase"  name="string_IsUpperCase"></input>
+            </div>
+        </div>      
+
+        <div class = "markup-holder">
+            <pre   class="instruction-holder">{
+                        'name' : 'string_IsLowerCase',
+                        'type' : 'String',
+                        'constraints' : 'IsLowerCase()',
+                        'hint_message' : 'IsLowerCase()',
+				}</pre>
+        
+            <label for="string_IsLowerCase" class="description-label">IsLowerCase</label>
+            <div class="validation-target-holder">
+			  <input class="validation-target" type="text" id="string_IsLowerCase"  name="string_IsLowerCase"></input>
+            </div>
+        </div>
+        
+        <div class = "markup-holder">
+            <pre   class="instruction-holder">{
+                        'name' : 'string_IsInitCap',
+                        'type' : 'String',
+                        'constraints' : 'IsInitCap()',
+                        'hint_message' : 'IsInitCap()',
+				}</pre>
+        
+            <label for="string_IsInitCap" class="description-label">IsInitCap</label>
+            <div class="validation-target-holder">
+			  <input class="validation-target" type="text" id="string_IsInitCap"  name="string_IsInitCap"></input>
+            </div>
+        </div>
+        
+        <div class = "markup-holder">
+            <pre   class="instruction-holder">{
+                        'name' : 'string_CharAt',
+                        'type' : 'String',
+                        'constraints' : 'CharAt(2,["a","b","c"])',
+                        'hint_message' : 'CharAt(2,["a","b","c"])',
+				}</pre>
+        
+            <label for="string_CharAt" class="description-label">CharAt(2,["a","b","c"])</label>
+            <div class="validation-target-holder">
+			  <input class="validation-target" type="text" id="string_CharAt"  name="string_CharAt"></input>
+            </div>
+        </div>              
+    
+    </fieldset>
+
+    <fieldset>
+        <legend>DatePicker</legend>
+
+        <div class = "markup-holder">
+                <pre   class="instruction-holder">{
+                        'name' : 'date_picker',
+                        'type' : 'Datepicker'
+				}</pre>
+        
+            <label for="date_picker" class="description-label">Datepicker</label>
+            <div class="validation-target-holder">
+                <input class="validation-target" type="text" id="date_picker"  name="date_picker"></input>
+            </div>
+        </div>
+    </fieldset>
+
+
+<input type="submit" class="form-validation-trigger" name="submit" value="Wyślij" />
+
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+.datepicker-holder{
+	background: #616161 url('../img/hint_bg.png') bottom repeat-x;
+	display:block;
+	padding:10px;
+	margin:0px;
+	position:absolute;
+	width:230px;
+	border:1px solid #222;
+}
+
+.datepicker-holder .days thead{
+	font-size:10px;
+	background:#777;
+	border:1px solid #555;
+}
+
+.datepicker-holder .days th{
+		border:1px solid #333;
+		color:#222;
+}
+	
+
+.datepicker-holder .days tbody{
+	font-size:10px;
+}
+
+
+
+.datepicker-holder td.day{
+	border:1px solid #444;
+	background:#aaa;
+	color:#333;
+}
+
+.datepicker-holder td.day.hover{
+	border:1px solid #006;
+	background:#36f;
+	color:#003;
+}
+
+
+.datepicker-holder td{
+	width:25px;
+	cursor:pointer;
+	text-align:center;
+}
+
+
+.navigation-button{
+	display:inline-block;
+	width:24px;
+	padding: 0px 3px;
+	height:24px;
+	cursor:pointer;
+	vertical-align:middle;
+}
+
+.years, .months{
+	
+	vertical-align:middle;
+	display:inline-block;
+}
+
+.navigation{
+	position:relative;
+	display:block;
+}
+
+.close-button{
+	display:block;
+	cursor:pointer;
+	margin-top:-23px;
+	margin-left:-23px;
+}

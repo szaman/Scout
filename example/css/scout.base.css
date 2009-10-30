@@ -1,0 +1,207 @@
+
+
+.scout-form
+{
+	display:block;
+	width:80%;
+	
+} 
+
+.scout-form div.markup-holder
+{
+	display:block;
+	padding:10px;
+	margin:5px;
+	overflow:hidden;
+	clear:both;
+	width:98%;
+
+}
+
+span.description-label{
+	display:block;
+}
+
+
+.scout-form div.markup-holder.correct
+{
+	border:1px solid #363;
+	background:#84C844 url(../img/correct-trans.png) 99% 6px no-repeat;
+	padding-right:10px;
+	color:#050;
+}
+
+.scout-form div.markup-holder.incorrect
+{
+	border:1px solid #900;
+	background:#FADACF url(../img/incorrect-trans.png) 99% 6px no-repeat;
+	padding-right:10px;
+	color:#900;
+}
+
+
+.markup-holder .state-icon
+{
+	position:absolute;
+}
+
+
+
+
+/* HINT */
+
+
+.hint
+{
+    font-size:13px;
+	display:block;
+	position:absolute;
+}
+
+
+
+.hint .hint-message-holder
+{
+	border:3px solid #555;
+	padding:5px;
+	color:#fff;
+	background:#616161 url(../img/hint_bg.png) repeat-x bottom;
+}
+
+/* ADDITIONAL */
+
+.help-icon
+{
+	vertical-align:top;
+}
+
+
+/* FIELDSET */
+
+.scout-form fieldset
+{
+background:#F7F7F7 url(../img/fieldset-bg.jpg) repeat-x scroll center bottom;
+border-color:#CCCCCC #999999 #999999 #CCCCCC;
+border-style:solid;
+border-width:1px;
+margin:10px 0;
+}
+
+
+.scout-form fieldset legend
+{
+	background:#DDDDDD none repeat scroll 0 0;
+	border:1px solid #CCCCCC;
+	font-size:1.1em;
+	font-weight:bold;
+	padding:2px 5px;
+}
+
+.scout-form fieldset.correct legend
+{
+background: #84C844;
+border-color: #336633;
+}
+
+.scout-form fieldset.correct 
+{
+border-color: #336633;
+}
+
+
+
+.validation-holder{
+	width:100%;
+}
+
+input{
+ overflow:hidden;
+ width:200px;
+}
+
+
+
+div.error-message{
+	margin-left:0px; /*  margin of error message - set to description label width if label description is block*/
+}
+
+.help-icon{
+    padding-top:0px;
+    padding-right:4px;
+}
+
+label.description-label{
+	width:250px; /* consatnt width of all labels*/
+	display:inline-block; /* block for input in next line*/
+	text-align:right;
+	top:0px;
+	vertical-align:top;
+	padding-top:4px;
+	float:left;
+}                  
+
+
+.scout-form .validation-target-holder{
+    display:inline-block;
+	float:left;
+	padding-top:4px;
+}
+
+
+
+.password-level-holder{
+margin-top:4px;
+}
+
+div.error-message{
+	margin-left:0px; /*  margin of error message - set to description label width if label description is block*/
+}
+
+
+label.description-label{
+	display:inline-block; /* block for input in next line*/
+	text-align:left;
+	top:0px;
+	vertical-align:top;
+	padding-top:4px;
+	float:left;
+}                  
+
+
+.scout-form .validation-target-holder{
+    display:inline-block;
+	float:left;
+	padding:2px;
+}
+
+
+
+.password-level-holder{
+margin-top:4px;
+}
+
+.scout-form div input
+{
+	border:1px solid #aaa;
+	padding:4px;
+}
+.markup-holder.correct input
+{
+	border: 1px solid #060;
+	color: #9f9;
+}
+
+.scout-form .error-message 
+{
+	margin-top:5px;
+	margin-left:auto;
+	margin-right:auto;  
+	width:190px;	
+	padding:6px 8px;
+		background-color:#bb3535;
+}
+
+pre
+{
+	display:none;
+}
